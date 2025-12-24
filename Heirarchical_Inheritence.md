@@ -31,6 +31,64 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
+```
+
+class Details:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def getName(self):
+        return self.name
+
+    def getAge(self):
+        return self.age
+
+
+class Employee(Details):
+    def __init__(self, name, age, employee_id, department):
+        super().__init__(name, age)
+        self.employee_id = employee_id
+        self.department = department
+
+    def getEmployeeDetails(self):
+        return (
+            f"Employee Name: {self.getName()}, "
+            f"Age: {self.getAge()}, "
+            f"Employee ID: {self.employee_id}, "
+            f"Department: {self.department}"
+        )
+
+
+# Derived Class 2
+class Patient(Details):
+    def __init__(self, name, age, patient_id, disease):
+        super().__init__(name, age)
+        self.patient_id = patient_id
+        self.disease = disease
+
+    def getPatientDetails(self):
+        return (
+            f"Patient Name: {self.getName()}, "
+            f"Age: {self.getAge()}, "
+            f"Patient ID: {self.patient_id}, "
+            f"Disease: {self.disease}"
+        )
+
+
+
+employee = Employee("Rahul", 30, "E101", "IT")
+patient = Patient("Anita", 45, "P202", "Diabetes")
+
+
+print(employee.getEmployeeDetails())
+print(patient.getPatientDetails())
+```
+
 ## Sample Output
+
+<img width="747" height="83" alt="image" src="https://github.com/user-attachments/assets/d4047ee0-d80d-4f15-9a11-f0a8d14b6c85" />
+
+## Result
+Thus , the program has been executed succesfully.
 
