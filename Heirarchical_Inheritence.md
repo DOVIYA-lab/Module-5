@@ -76,9 +76,16 @@ class Patient(Details):
         )
 
 
-
-employee = Employee("Rahul", 30, "E101", "IT")
-patient = Patient("Anita", 45, "P202", "Diabetes")
+name=input()
+age=int(input())
+employee_id=int(input())
+department=input()
+employee = Employee(name,age,employee_id,department)
+name=input()
+age=int(input())
+patient_id=int(input())
+disease=input()
+patient = Patient(name,age,patient_id,disease)
 
 
 print(employee.getEmployeeDetails())
